@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';

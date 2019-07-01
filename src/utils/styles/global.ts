@@ -1,7 +1,8 @@
-import { injectGlobal } from 'emotion';
+// import { injectGlobal } from 'emotion';
 import { fontSize, fontWeight } from './sizes';
+// import { Global, css } from '@emotion/core';
 
-export default injectGlobal`
+export default `
     html,
     body {
         height: 100%;

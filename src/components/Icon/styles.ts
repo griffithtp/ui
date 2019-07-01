@@ -1,4 +1,5 @@
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
 import { StyledOtherComponent } from 'create-emotion-styled';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';

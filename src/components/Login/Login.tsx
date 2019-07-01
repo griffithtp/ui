@@ -10,6 +10,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
 
 // @ts-ignore
 import classes from './login.scss';
@@ -192,7 +194,14 @@ export default class LoginModal extends Component<Partial<LoginModalProps>, Logi
       form: { password },
     } = this.state;
     return (
-      <FormControl error={!password.value && !password.pristine} fullWidth={true} required={password.required} style={{ marginTop: '8px' }}>
+      <FormControl
+        css={css`
+          margin-top: '18px';
+          background-color: 'red';
+        `}
+        error={!password.value && !password.pristine}
+        fullWidth={true}
+        required={password.required}>
         <InputLabel htmlFor={'password'}>{'Password'}</InputLabel>
         <Input id={'login--form-password'} onChange={this.handlePasswordChange} placeholder={'Your strong password'} type={'password'} value={password.value} />
         {!password.value && !password.pristine && <FormHelperText id={'password-error'}>{password.helperText}</FormHelperText>}

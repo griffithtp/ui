@@ -1,7 +1,7 @@
 import Avatar from '@material-ui/core/Avatar';
 import ListItem from '@material-ui/core/ListItem';
 import Typography from '@material-ui/core/Typography';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 export const Heading = styled(Typography)`
   && {

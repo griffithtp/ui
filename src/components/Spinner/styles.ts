@@ -1,5 +1,6 @@
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import styled, { css } from 'react-emotion';
 
 import colors from '../../utils/styles/colors';
 

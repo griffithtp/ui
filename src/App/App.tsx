@@ -1,5 +1,7 @@
 import React, { Component, ReactElement } from 'react';
 import isNil from 'lodash/isNil';
+import { Global, css } from '@emotion/core';
+import { fontSize, fontWeight } from '../utils/styles/sizes';
 
 import storage from '../utils/storage';
 import { makeLogin, isTokenExpire } from '../utils/login';
@@ -64,17 +66,38 @@ export default class App extends Component<{}, AppStateInterface> {
     const context = { isUserLoggedIn, packages, logoUrl, user, scope };
 
     return (
-      // @ts-ignore
-      <Container isLoading={isLoading}>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <>
-            <AppContextProvider value={context}>{this.renderContent()}</AppContextProvider>
-          </>
-        )}
-        {this.renderLoginModal()}
-      </Container>
+      <React.Fragment>
+        <Global
+          styles={css`
+            html,
+            body {
+              height: 100%;
+              background-color: red;
+            }
+            body {
+              font-size: ${fontSize.base};
+            }
+            ul {
+              margin: 0;
+              padding: 0;
+              list-style: none;
+            }
+            strong {
+              font-weight: ${fontWeight.semiBold};
+            }
+          `}
+        />
+        <Container isLoading={isLoading}>
+          {isLoading ? (
+            <Loading />
+          ) : (
+            <>
+              <AppContextProvider value={context}>{this.renderContent()}</AppContextProvider>
+            </>
+          )}
+          {this.renderLoginModal()}
+        </Container>
+      </React.Fragment>
     );
   }
 

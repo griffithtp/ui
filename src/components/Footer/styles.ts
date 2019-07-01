@@ -1,4 +1,4 @@
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
 import mq from '../../utils/styles/media';
 import Icon from '../Icon/Icon';
 import colors from '../../utils/styles/colors';

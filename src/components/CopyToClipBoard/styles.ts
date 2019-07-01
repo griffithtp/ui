@@ -1,5 +1,5 @@
 import IconButton from '@material-ui/core/IconButton';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 export const ClipBoardCopy = styled('div')`
   && {
