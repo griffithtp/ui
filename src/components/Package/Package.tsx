@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import BugReport from '@material-ui/icons/BugReport';
 import Grid from '@material-ui/core/Grid';
@@ -161,10 +161,10 @@ const Package: React.FC<PackageInterface> = ({
     // @ts-ignore
     const tags = keywords.sort().map((keyword, index) => <Tag key={index}>{keyword}</Tag>);
     return (
-      <>
+      <Fragment>
         <Description component={'span'}>{description}</Description>
         {tags.length > 0 && <TagContainer>{tags}</TagContainer>}
-      </>
+      </Fragment>
     );
   };
 

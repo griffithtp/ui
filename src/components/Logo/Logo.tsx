@@ -1,4 +1,6 @@
 import React from 'react';
+import { jsx } from '@emotion/core';
+/** @jsx jsx */ jsx;
 import styled from '@emotion/styled';
 import logo from './img/logo.svg';
 

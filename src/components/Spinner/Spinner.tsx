@@ -1,4 +1,6 @@
 import React from 'react';
+import { jsx } from '@emotion/core';
+/** @jsx jsx */ jsx;
 
 import { Circular, Wrapper } from './styles';
 

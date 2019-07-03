@@ -1,4 +1,7 @@
-import React, { Component, ReactElement } from 'react';
+import React, { Component, ReactElement, Fragment } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+
 import isNil from 'lodash/isNil';
 import { Global, css } from '@emotion/core';
 import { fontSize, fontWeight } from '../utils/styles/sizes';
@@ -91,9 +94,9 @@ export default class App extends Component<{}, AppStateInterface> {
           {isLoading ? (
             <Loading />
           ) : (
-            <>
+            <Fragment>
               <AppContextProvider value={context}>{this.renderContent()}</AppContextProvider>
-            </>
+            </Fragment>
           )}
           {this.renderLoginModal()}
         </Container>
@@ -203,14 +206,14 @@ export default class App extends Component<{}, AppStateInterface> {
 
   public renderContent = (): ReactElement<HTMLElement> => {
     return (
-      <>
+      <Fragment>
         <Content>
           <RouterApp onLogout={this.handleLogout} onToggleLoginModal={this.handleToggleLoginModal}>
             {this.renderHeader()}
           </RouterApp>
         </Content>
         <Footer />
-      </>
+      </Fragment>
     );
   };
 

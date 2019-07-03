@@ -1,4 +1,7 @@
 import React from 'react';
+import { jsx } from '@emotion/core';
+/** @jsx jsx */ jsx;
+
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import Paper from '@material-ui/core/Paper';

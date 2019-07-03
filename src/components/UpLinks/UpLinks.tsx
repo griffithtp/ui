@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, Fragment } from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
@@ -44,10 +44,10 @@ class UpLinks extends React.PureComponent<{}> {
     if (Object.keys(uplinks).length > 0) {
       return (
         uplinks && (
-          <>
+          <Fragment>
             <Heading variant="subheading">{'Uplinks'}</Heading>
             {this.renderUpLinksList(uplinks)}
-          </>
+          </Fragment>
         )
       );
     }

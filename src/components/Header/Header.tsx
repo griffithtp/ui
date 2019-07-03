@@ -1,4 +1,6 @@
-import React, { SyntheticEvent, Component, Fragment, ReactElement } from 'react';
+import { SyntheticEvent, Component, Fragment, ReactElement } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { Link } from 'react-router-dom';
 
 import Button from '@material-ui/core/Button';
@@ -232,7 +234,7 @@ class Header extends Component<Props, State> {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
     return (
-      <>
+      <Fragment>
         <IconButton color="inherit" id="header--button-account" onClick={this.handleLoggedInMenu}>
           <AccountCircle />
         </IconButton>
@@ -254,7 +256,7 @@ class Header extends Component<Props, State> {
             {'Logout'}
           </MenuItem>
         </Menu>
-      </>
+      </Fragment>
     );
   };
 

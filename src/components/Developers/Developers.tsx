@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Avatar from '@material-ui/core/Avatar';
 import Add from '@material-ui/icons/Add';
@@ -41,7 +41,7 @@ class Developers extends Component<Props, State> {
     const { type } = this.props;
     const { visibleDevs } = this.state;
     return (
-      <>
+      <Fragment>
         <Heading variant={'subheading'}>{type}</Heading>
         <Content>
           {developers.slice(0, visibleDevs).map(developer => (
@@ -53,7 +53,7 @@ class Developers extends Component<Props, State> {
             </Fab>
           )}
         </Content>
-      </>
+      </Fragment>
     );
   };
 

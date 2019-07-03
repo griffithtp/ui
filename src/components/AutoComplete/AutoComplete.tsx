@@ -1,4 +1,7 @@
 import React, { KeyboardEvent } from 'react';
+import { jsx } from '@emotion/core';
+/** @jsx jsx */ jsx;
+
 import Autosuggest from 'react-autosuggest';
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';

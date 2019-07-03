@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { fontWeight } from '../../utils/styles/sizes';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 
 interface Props {
   text: string;

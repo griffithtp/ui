@@ -8,6 +8,7 @@
     "plugin:jsx-a11y/recommended"
   ],
   "plugins": [
+    "emotion",
     "react",
     "jest",
     "prettier",
@@ -26,6 +27,7 @@
   },
   "rules": {
     "babel/no-invalid-this": 0,
+    "emotion/jsx-import": "error",
     "no-invalid-this": 0,
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "prettier/prettier": "error",

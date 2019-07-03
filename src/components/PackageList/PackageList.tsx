@@ -29,7 +29,7 @@ export default class PackageList extends React.Component<Props, {}> {
   }
 
   private renderPackages = () => {
-    return <>{this.renderList()}</>;
+    return <Fragment>{this.renderList()}</Fragment>;
   };
 
   private renderList = () => {

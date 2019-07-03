@@ -1,5 +1,6 @@
 {
 	"rules": {
+		"emotion/jsx-import": "error",
 		"no-console": 0
 	}
 }

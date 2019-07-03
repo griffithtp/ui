@@ -1,4 +1,6 @@
 import React, { ReactNode } from 'react';
+import { jsx } from '@emotion/core';
+/** @jsx jsx */ jsx;
 
 interface Props {
   children?: ReactNode;

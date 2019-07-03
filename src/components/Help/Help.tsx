@@ -1,8 +1,10 @@
+import React, { Fragment } from 'react';
 import Button from '@material-ui/core/Button';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import React, { Fragment } from 'react';
 
 import { getRegistryURL } from '../../utils/url';
 import CopyToClipBoard from '../CopyToClipBoard';

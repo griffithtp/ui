@@ -3,7 +3,7 @@ import { formatDateDistance } from '../../utils/package';
 import { Heading, Spacer, ListItemText } from './styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import React, { ReactElement } from 'react';
+import React, { ReactElement, Fragment } from 'react';
 import { DIST_TAGS } from '../../../lib/constants';
 
 const NOT_AVAILABLE = 'Not available';
@@ -40,20 +40,20 @@ class Versions extends React.PureComponent {
     const { versions = {}, time: timeMap = {}, [DIST_TAGS]: distTags = {} } = packageMeta;
 
     return (
-      <>
+      <Fragment>
         {distTags && (
-          <>
+          <Fragment>
             <Heading variant="subheading">{'Current Tags'}</Heading>
             {this.renderPackageList(distTags, false, timeMap)}
-          </>
+          </Fragment>
         )}
         {versions && (
-          <>
+          <Fragment>
             <Heading variant="subheading">{'Version History'}</Heading>
             {this.renderPackageList(versions, true, timeMap)}
-          </>
+          </Fragment>
         )}
-      </>
+      </Fragment>
     );
   }
 }

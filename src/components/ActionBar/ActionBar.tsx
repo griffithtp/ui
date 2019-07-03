@@ -1,4 +1,4 @@
-import React, { Component, ReactElement } from 'react';
+import React, { Component, ReactElement, Fragment } from 'react';
 
 import BugReportIcon from '@material-ui/icons/BugReport';
 import DownloadIcon from '@material-ui/icons/CloudDownload';
@@ -61,7 +61,7 @@ class ActionBar extends Component {
         component.push(
           // @ts-ignore
           <Tooltip key={key} title={ACTIONS[value]['title']}>
-            <>{this.renderIconsWithLink(link, fab)}</>
+            <Fragment>{this.renderIconsWithLink(link, fab)}</Fragment>
           </Tooltip>
         );
       }
@@ -69,9 +69,9 @@ class ActionBar extends Component {
     }, []);
 
     return (
-      <>
+      <Fragment>
         <ActionListItem alignItems={'flex-start'}>{renderList}</ActionListItem>
-      </>
+      </Fragment>
     );
   };
 

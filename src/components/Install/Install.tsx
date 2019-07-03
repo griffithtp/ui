@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import React, { Component } from 'react';
@@ -26,15 +27,15 @@ class Install extends Component {
 
   public renderCopyCLI = ({ packageName = '' }: Partial<VersionPageConsumerProps>) => {
     return (
-      <>
+      <Fragment>
         <List subheader={<Heading variant={'subheading'}>{'Installation'}</Heading>}>{this.renderListItems(packageName)}</List>
-      </>
+      </Fragment>
     );
   };
 
   public renderListItems = (packageName: string) => {
     return (
-      <>
+      <Fragment>
         <InstallItem>
           <PackageMangerAvatar alt={'npm logo'} src={npm} />
           <ListItemText primary={<CopyToClipBoard text={`npm install ${packageName}`} />} secondary={'Install using NPM'} />
@@ -47,7 +48,7 @@ class Install extends Component {
           <PackageMangerAvatar alt={'pnpm logo'} src={pnpm} />
           <ListItemText primary={<CopyToClipBoard text={`pnpm install ${packageName}`} />} secondary={'Install using PNPM'} />
         </InstallItem>
-      </>
+      </Fragment>
     );
   };
 }

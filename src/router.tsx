@@ -1,6 +1,6 @@
 /* eslint  react/jsx-max-depth:0 */
 
-import React, { Component, ReactElement } from 'react';
+import React, { Component, ReactElement, Fragment } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { AppContextConsumer, AppStateInterface } from './App/App';
 
@@ -21,7 +21,7 @@ class RouterApp extends Component<RouterAppProps> {
   public render(): ReactElement<HTMLDivElement> {
     return (
       <Router history={history}>
-        <>
+        <Fragment>
           {this.renderHeader()}
           <Switch>
             <Route exact={true} path={'/'} render={this.renderHomePage} />
@@ -29,7 +29,7 @@ class RouterApp extends Component<RouterAppProps> {
             <Route exact={true} path={'/-/web/detail/:package'} render={this.renderVersionPage} />
             <Route component={NotFound} />
           </Switch>
-        </>
+        </Fragment>
       </Router>
     );
   }

@@ -1,4 +1,6 @@
 import React, { MouseEvent } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import capitalize from 'lodash/capitalize';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
 
