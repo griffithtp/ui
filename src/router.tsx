@@ -1,8 +1,9 @@
 /* eslint  react/jsx-max-depth:0 */
-
-import React, { Component, ReactElement, Fragment } from 'react';
+import { Component, ReactElement, Fragment } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { AppContextConsumer, AppStateInterface } from './App/App';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 
 import { asyncComponent } from './utils/asyncComponent';
 import history from './history';

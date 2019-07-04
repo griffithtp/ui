@@ -30,6 +30,7 @@ export interface AppStateInterface {
   logoUrl: string;
   user: {
     username?: string;
+    token?: string;
   };
   scope: string;
   showLoginModal: boolean;
@@ -91,13 +92,7 @@ export default class App extends Component<{}, AppStateInterface> {
           `}
         />
         <Container isLoading={isLoading}>
-          {isLoading ? (
-            <Loading />
-          ) : (
-            <Fragment>
-              <AppContextProvider value={context}>{this.renderContent()}</AppContextProvider>
-            </Fragment>
-          )}
+          {isLoading ? <Loading /> : <AppContextProvider value={context}>{this.renderContent()}</AppContextProvider>}
           {this.renderLoginModal()}
         </Container>
       </React.Fragment>
